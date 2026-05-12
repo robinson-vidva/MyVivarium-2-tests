@@ -1,0 +1,17 @@
+{
+  "name": "myvivarium-test-env",
+  "private": true,
+  "description": "Regression test environment for MyVivarium-2",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "PWDEBUG=1 playwright test",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.0.0",
+    "mysql2": "^3.11.0",
+    "typescript": "^5.6.0"
+  }
+}

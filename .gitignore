@@ -1,0 +1,10 @@
+app/
+v1-reference/
+.claude/
+tests/node_modules/
+tests/playwright-report/
+tests/test-results/
+tests/blob-report/
+tests/.playwright/
+.DS_Store
+*.log

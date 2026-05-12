@@ -1,0 +1,51 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: mv-db
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: myvivarium
+      MYSQL_USER: myvivarium
+      MYSQL_PASSWORD: myvivariumpw
+    ports:
+      - "3307:3306"
+    volumes:
+      - mv-db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 30s
+
+  app:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    container_name: mv-app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_USERNAME: myvivarium
+      DB_PASSWORD: myvivariumpw
+      DB_DATABASE: myvivarium
+      SMTP_HOST: smtp.invalid
+      SMTP_PORT: "1025"
+      SMTP_USERNAME: ""
+      SMTP_PASSWORD: ""
+      SMTP_ENCRYPTION: tls
+      SENDER_EMAIL: noreply@myvivarium.test
+      SENDER_NAME: MyVivarium Test
+      DEMO: ""
+      SESSION_COOKIE_SECURE: "false"
+      MV_RESET: "${MV_RESET:-0}"
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+
+volumes:
+  mv-db-data:
