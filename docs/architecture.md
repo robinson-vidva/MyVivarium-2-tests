@@ -4,6 +4,19 @@ Reference material for the intended shape of this repository. Read this
 before making structural changes — new scripts, repo layout shifts, new
 top-level directories. Decisions are logged in `docs/decisions.md`.
 
+## Table of contents
+
+1. [Overview](#overview)
+2. [Repo layout](#repo-layout)
+3. [Sync workflow — `scripts/sync-app.sh`](#sync-workflow--scriptssync-appsh)
+4. [Regression run workflow — `scripts/run-regression.sh`](#regression-run-workflow--scriptsrun-regressionsh)
+5. [Regression report shape](#regression-report-shape)
+6. [Synthetic data generator](#synthetic-data-generator)
+7. [MyVivarium-2 README addition](#myvivarium-2-readme-addition)
+8. [Future work — flagged but deferred](#future-work--flagged-but-deferred)
+9. [Concerns to honor](#concerns-to-honor)
+10. [Implementation status](#implementation-status)
+
 ## Overview
 
 This is a **two-repo design**:
@@ -294,6 +307,21 @@ with the foundation is how scope creep starts.
   `results.json` and rendered separately. An inline embed in
   `summary.md` is feasible but adds storage cost; defer until storage
   cost has been measured.
+- **Failure classification automation.** Claude Code currently
+  classifies failing specs by hand during diagnosis (`SELECTOR-WRONG`,
+  `TEST-ASSUMPTION-WRONG`, `TEST-INFRASTRUCTURE-WRONG`,
+  `REAL-APP-BUG`). Heuristic automation on failure signatures is
+  feasible but defers until we have several real failures to learn
+  from.
+- **Multiple-app-version compare runs.**
+  `./scripts/run-regression.sh --against v2.0.0,v2.1.0,main` would
+  generate a regression report against each named ref plus a diff
+  between them. Defer until there is a concrete reason to compare
+  versions side-by-side.
+- **Service worker / PWA depth tests.** TESTPLAN currently has one
+  row covering registration plus offline fallback (NAV-10, NAV-11).
+  Expand into cache-key behaviour, update flow, and offline-mode
+  mutation queueing if PWA becomes a feature users depend on.
 
 ## Concerns to honor
 
