@@ -76,3 +76,16 @@ below with the same five fields.
   copy of the code at that SHA.
 - **Alternatives considered:** Git submodule pointing at
   MyVivarium-2; commit `app/` as a snapshot at each regression run.
+
+## ADR-007: What to do when a specified commit message contains a factual error?
+
+- **Date:** 2026-05-12
+- **Choice:** Stop, flag the error, offer corrected text, await
+  confirmation before committing.
+- **Rationale:** Honest commit history matters more than literal
+  adherence to a specified message; once a misleading commit is
+  logged, the no-amend rule forces a follow-up fix that is uglier
+  than catching the inaccuracy at draft time. Precedent set in the
+  Phase 4 boundary commit and the initial commit.
+- **Alternatives considered:** Commit verbatim and amend later;
+  silently correct the inaccuracy.
