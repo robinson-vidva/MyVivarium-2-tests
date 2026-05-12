@@ -10,6 +10,15 @@ history that lives alongside the app's `deep-testing` branch. The app
 itself is cloned into `app/` and treated as upstream code — we test it,
 we do not own it.
 
+## Architecture
+
+This repo follows a specific architecture documented in
+`docs/architecture.md`. Read it before making structural changes (new
+scripts, repo layout shifts, new top-level directories). Decisions are
+logged in `docs/decisions.md`. If you make a new structural decision,
+add it to `decisions.md` as a numbered entry with Date | Question |
+Choice | Rationale | Alternatives.
+
 ## Repo layout
 
 - `app/` — clone of `https://github.com/robinson-vidva/MyVivarium-2`,
