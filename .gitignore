@@ -7,6 +7,7 @@ tests/test-results/
 tests/blob-report/
 tests/.playwright/
 scripts/node_modules/
+scripts/seed/last-run.json
 .app-version
 .DS_Store
 *.log

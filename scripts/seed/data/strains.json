@@ -1,0 +1,42 @@
+[
+  {
+    "str_id": "000664",
+    "str_name": "C57BL/6J",
+    "str_aka": "B6",
+    "str_url": "https://www.jax.org/strain/000664",
+    "str_rrid": "RRID:IMSR_JAX:000664",
+    "str_notes": "Most widely used inbred mouse strain. Used as the genetic background for many transgenic and knockout models."
+  },
+  {
+    "str_id": "000651",
+    "str_name": "BALB/cJ",
+    "str_aka": "BALB/c",
+    "str_url": "https://www.jax.org/strain/000651",
+    "str_rrid": "RRID:IMSR_JAX:000651",
+    "str_notes": "Albino, inbred. Common in immunology research."
+  },
+  {
+    "str_id": "001800",
+    "str_name": "FVB/NJ",
+    "str_aka": "FVB",
+    "str_url": "https://www.jax.org/strain/001800",
+    "str_rrid": "RRID:IMSR_JAX:001800",
+    "str_notes": "Albino, large pronuclei. Preferred for transgenic generation."
+  },
+  {
+    "str_id": "000671",
+    "str_name": "DBA/2J",
+    "str_aka": "D2",
+    "str_url": "https://www.jax.org/strain/000671",
+    "str_rrid": "RRID:IMSR_JAX:000671",
+    "str_notes": "Used in neuroscience, behaviour, and cardiovascular research."
+  },
+  {
+    "str_id": "002448",
+    "str_name": "129S1/SvImJ",
+    "str_aka": "129S1",
+    "str_url": "https://www.jax.org/strain/002448",
+    "str_rrid": "RRID:IMSR_JAX:002448",
+    "str_notes": "Common ES cell donor for gene targeting in early KO mice."
+  }
+]

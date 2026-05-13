@@ -1,0 +1,26 @@
+[
+  {
+    "email": "vm@test.local",
+    "name": "Vivarium Manager",
+    "position": "Vivarium Manager",
+    "initials": "VM",
+    "role": "vivarium_manager",
+    "password": "VivPass123!"
+  },
+  {
+    "email": "user1@test.local",
+    "name": "User One",
+    "position": "Research Technician",
+    "initials": "U1",
+    "role": "user",
+    "password": "User1Pass123!"
+  },
+  {
+    "email": "user2@test.local",
+    "name": "User Two",
+    "position": "Postdoctoral Fellow",
+    "initials": "U2",
+    "role": "user",
+    "password": "User2Pass123!"
+  }
+]

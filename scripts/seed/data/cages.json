@@ -1,0 +1,34 @@
+{
+  "holding": [
+    { "cage_id": "HC-001", "room": "B201", "rack": "R1", "remarks": "Standard holding cage" },
+    { "cage_id": "HC-002", "room": "B201", "rack": "R1", "remarks": "Standard holding cage" },
+    { "cage_id": "HC-003", "room": "B201", "rack": "R2", "remarks": "Adult cohort" },
+    { "cage_id": "HC-004", "room": "B201", "rack": "R2", "remarks": "Weanlings" },
+    { "cage_id": "HC-005", "room": "B202", "rack": "R1", "remarks": "Quarantine arrivals" },
+    { "cage_id": "HC-006", "room": "B202", "rack": "R3", "remarks": "Aged cohort" },
+    { "cage_id": "HC-007", "room": "B202", "rack": "R3", "remarks": "Adult mixed-strain" }
+  ],
+  "breeding": [
+    {
+      "cage_id": "BC-001",
+      "room": "B201",
+      "rack": "R4",
+      "cross": "C57BL/6J x C57BL/6J",
+      "remarks": "Trio breeding setup"
+    },
+    {
+      "cage_id": "BC-002",
+      "room": "B201",
+      "rack": "R4",
+      "cross": "BALB/cJ x BALB/cJ",
+      "remarks": "Pair breeding"
+    },
+    {
+      "cage_id": "BC-003",
+      "room": "B202",
+      "rack": "R5",
+      "cross": "FVB/NJ x FVB/NJ",
+      "remarks": "Transgenic line"
+    }
+  ]
+}

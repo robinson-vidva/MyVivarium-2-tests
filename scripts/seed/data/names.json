@@ -1,0 +1,72 @@
+{
+  "mouseSuffixes": [
+    "Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta",
+    "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi",
+    "Rho", "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"
+  ],
+  "earCodes": [
+    "L", "R", "LR", "L2", "R2", "1R", "1L", "2L", "2R", "0", "1", "2", "3", "4", "5"
+  ],
+  "genotypeFragments": [
+    "wt",
+    "wt/wt",
+    "Cre+/-",
+    "fl/fl",
+    "fl/+",
+    "het",
+    "homo",
+    "tg/+",
+    "+/+",
+    "het Cre+"
+  ],
+  "notePhrases": [
+    "Adult cohort - routine monitoring.",
+    "Recent weaning, observing growth.",
+    "Marked for upcoming experiment.",
+    "Awaiting genotyping confirmation.",
+    "Quiet, no abnormalities noted.",
+    "Slight weight loss; monitor weekly.",
+    "Recovering from surgery.",
+    "Pre-experiment baseline period.",
+    "Confirmed pregnant; date noted on card.",
+    "Old male - retire from breeding.",
+    "Singleton from last litter.",
+    "Co-housed by sex; no aggression observed.",
+    "Approved for behavior battery next week.",
+    "Tail tipped for genotyping.",
+    "Ear-punched at weaning."
+  ],
+  "maintenanceComments": [
+    "Cage change completed; bedding fresh.",
+    "Water bottle replaced; checked nozzle.",
+    "Food hopper refilled; no waste.",
+    "Routine health check; all mice normal.",
+    "Cleaned area, no leaks observed."
+  ],
+  "taskTitles": [
+    "Tail snip and genotype",
+    "Weigh weanlings",
+    "Wean litter from BC-001",
+    "Order more cages",
+    "Restock standard chow",
+    "Submit IACUC amendment"
+  ],
+  "taskDescriptions": [
+    "Take tail tips for the 5 mice marked on the cage card and submit for genotyping.",
+    "Record body weight for all weanlings in HC-004 and update the records.",
+    "Wean P21 litter from BC-001 into a fresh holding cage; record cage and dob.",
+    "Place purchase order for 50 fresh holding cages and bedding.",
+    "Replenish standard chow supply in food storage cupboard.",
+    "Draft IACUC amendment for the new behavioral protocol and submit for review."
+  ],
+  "reminderTitles": [
+    "Daily morning check",
+    "Weekly cage change Monday",
+    "Monthly genotyping batch"
+  ],
+  "reminderDescriptions": [
+    "Verify food, water, and general welfare for all assigned cages.",
+    "Change cage bedding for all holding cages assigned to me.",
+    "Submit tail snips collected over the past month for genotyping."
+  ]
+}
