@@ -164,7 +164,8 @@ async function main(): Promise<void> {
       stdio: 'inherit',
       env: {
         ...process.env,
-        PLAYWRIGHT_JSON_OUTPUT_NAME: 'playwright-report/results.json',
+        PLAYWRIGHT_JSON_OUTPUT_NAME: resolve(testsDir, 'playwright-report', 'results.json'),
+        PLAYWRIGHT_HTML_OPEN: 'never',
       },
     },
   );
