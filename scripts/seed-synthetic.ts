@@ -277,12 +277,13 @@ async function updateLabSettings(
 
 async function addStrainViaUi(page: Page, s: StrainSeed): Promise<void> {
   await page.goto('/manage_strain.php');
-  await page.fill('input[name="strain_id"]', s.str_id);
-  await page.fill('input[name="strain_name"]', s.str_name);
-  await page.fill('input[name="strain_aka"]', s.str_aka);
-  await page.fill('input[name="strain_url"]', s.str_url);
-  await page.fill('input[name="strain_rrid"]', s.str_rrid);
-  await page.fill('textarea[name="strain_notes"]', s.str_notes);
+  await page.getByRole('button', { name: 'Add New Strain' }).click();
+  await page.fill('#strain_id', s.str_id);
+  await page.fill('#strain_name', s.str_name);
+  await page.fill('#strain_aka', s.str_aka);
+  await page.fill('#strain_url', s.str_url);
+  await page.fill('#strain_rrid', s.str_rrid);
+  await page.fill('#strain_notes', s.str_notes);
   await Promise.all([
     page.waitForLoadState('domcontentloaded'),
     page.click('button[name="add"]'),
@@ -296,9 +297,10 @@ async function addIacucViaUi(
   pdfPath: string,
 ): Promise<void> {
   await page.goto('/manage_iacuc.php');
-  await page.fill('input[name="iacuc_id"]', iacuc_id);
-  await page.fill('input[name="iacuc_title"]', title);
-  await page.setInputFiles('input[name="iacuc_file"]', pdfPath);
+  await page.getByRole('button', { name: 'Add New IACUC' }).click();
+  await page.fill('#iacuc_id', iacuc_id);
+  await page.fill('#iacuc_title', title);
+  await page.setInputFiles('#iacuc_file', pdfPath);
   await Promise.all([
     page.waitForLoadState('domcontentloaded'),
     page.click('button[name="add"]'),
