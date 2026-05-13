@@ -5,6 +5,7 @@ import {
   mkdirSync,
   copyFileSync,
   cpSync,
+  unlinkSync,
 } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { syncApp } from './sync-app.js';
@@ -164,7 +165,7 @@ async function main(): Promise<void> {
       stdio: 'inherit',
       env: {
         ...process.env,
-        PLAYWRIGHT_JSON_OUTPUT_NAME: resolve(testsDir, 'playwright-report', 'results.json'),
+        PLAYWRIGHT_JSON_OUTPUT_NAME: resolve(testsDir, 'results.json'),
         PLAYWRIGHT_HTML_OPEN: 'never',
       },
     },
@@ -193,6 +194,14 @@ async function main(): Promise<void> {
     console.warn(
       'No Playwright results.json found. Tests likely did not complete cleanly.',
     );
+  }
+
+  if (copiedResultsAt) {
+    try {
+      unlinkSync(join(testsDir, 'results.json'));
+    } catch {
+      // ignore - file may already be gone
+    }
   }
 
   const testResultsDir = join(testsDir, 'test-results');
