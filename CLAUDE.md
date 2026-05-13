@@ -19,6 +19,18 @@ logged in `docs/decisions.md`. If you make a new structural decision,
 add it to `decisions.md` as a numbered entry with Date | Question |
 Choice | Rationale | Alternatives.
 
+## Scripts
+
+Three TypeScript scripts under `scripts/`, run via `tsx`:
+
+- `scripts/sync-app.ts [ref]` — pull a version of MyVivarium-2 into `../app`.
+- `scripts/run-regression.ts [--no-sync] [--ref <ref>]` — sync, bring up the stack, run the suite, snapshot a report.
+- `scripts/report-summarize.ts` — convert Playwright JSON to `summary.md`. Called by `run-regression`.
+
+First-time setup: `cd scripts && npm install`.
+
+Regression reports land in `regression-reports/YYYY-MM-DD-HHMMSS-<sha7>/`.
+
 ## Repo layout
 
 - `app/` — clone of `https://github.com/robinson-vidva/MyVivarium-2`,

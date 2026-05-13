@@ -1,0 +1,17 @@
+{
+  "name": "myvivarium-2-tests-scripts",
+  "private": true,
+  "type": "module",
+  "description": "Regression scripts for MyVivarium-2-tests",
+  "scripts": {
+    "sync": "tsx sync-app.ts",
+    "regression": "tsx run-regression.ts",
+    "summarize": "tsx report-summarize.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "mysql2": "^3.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

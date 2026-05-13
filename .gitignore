@@ -6,5 +6,7 @@ tests/playwright-report/
 tests/test-results/
 tests/blob-report/
 tests/.playwright/
+scripts/node_modules/
+.app-version
 .DS_Store
 *.log
